@@ -84,7 +84,7 @@
                           <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                           <Component id="pizza" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="hi" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -117,7 +117,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="burger" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="pizza" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="hi" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       </Group>
@@ -435,7 +435,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="hi">
           <Properties>
             <Property name="text" type="java.lang.String" value="Hiii"/>
           </Properties>
