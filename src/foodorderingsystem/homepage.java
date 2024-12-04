@@ -227,7 +227,7 @@ public class homepage extends javax.swing.JFrame {
 
         hi.setText("Hiii");
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("hi jus");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
