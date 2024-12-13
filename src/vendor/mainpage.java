@@ -30,24 +30,41 @@ public class mainpage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        thehungryhub = new javax.swing.JLabel();
-        login = new javax.swing.JButton();
-        usericon = new javax.swing.JButton();
-        revenuebtn = new javax.swing.JButton();
-        reviewbtn = new javax.swing.JButton();
-        menubtn = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         menuList = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         updatebtn = new javax.swing.JButton();
         deletebtn = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        thehungryhub = new javax.swing.JLabel();
+        login = new javax.swing.JButton();
+        usericon = new javax.swing.JButton();
+        order1 = new javax.swing.JButton();
+        order2 = new javax.swing.JButton();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 600));
+
+        menuList.setModel(model
+        );
+        jScrollPane1.setViewportView(menuList);
+
+        jLabel1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 24)); // NOI18N
+        jLabel1.setText("Menu list");
+
+        updatebtn.setBackground(new java.awt.Color(255, 255, 204));
+        updatebtn.setFont(new java.awt.Font("Perpetua", 0, 24)); // NOI18N
+        updatebtn.setText("Update");
+        updatebtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        deletebtn.setBackground(new java.awt.Color(255, 255, 204));
+        deletebtn.setFont(new java.awt.Font("Perpetua", 0, 24)); // NOI18N
+        deletebtn.setText("Delete");
+        deletebtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 102));
 
@@ -81,42 +98,47 @@ public class mainpage extends javax.swing.JFrame {
             }
         });
 
-        revenuebtn.setBackground(new java.awt.Color(255, 204, 102));
-        revenuebtn.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
-        revenuebtn.setForeground(new java.awt.Color(255, 255, 255));
-        revenuebtn.setText("Revenue");
-        revenuebtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        revenuebtn.setBorderPainted(false);
-        revenuebtn.setHideActionText(true);
-        revenuebtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        revenuebtn.setPreferredSize(new java.awt.Dimension(20, 10));
-        revenuebtn.addActionListener(new java.awt.event.ActionListener() {
+        order1.setBackground(new java.awt.Color(255, 204, 102));
+        order1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        order1.setForeground(new java.awt.Color(255, 255, 255));
+        order1.setText("Revenue");
+        order1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        order1.setBorderPainted(false);
+        order1.setHideActionText(true);
+        order1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        order1.setPreferredSize(new java.awt.Dimension(20, 10));
+        order1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                revenuebtnActionPerformed(evt);
+                order1ActionPerformed(evt);
             }
         });
 
-        reviewbtn.setBackground(new java.awt.Color(255, 204, 102));
-        reviewbtn.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
-        reviewbtn.setForeground(new java.awt.Color(255, 255, 255));
-        reviewbtn.setText("Review");
-        reviewbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        reviewbtn.setBorderPainted(false);
-        reviewbtn.setHideActionText(true);
-        reviewbtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        reviewbtn.setPreferredSize(new java.awt.Dimension(20, 10));
-        reviewbtn.addActionListener(new java.awt.event.ActionListener() {
+        order2.setBackground(new java.awt.Color(255, 204, 102));
+        order2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        order2.setForeground(new java.awt.Color(255, 255, 255));
+        order2.setText("Review");
+        order2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        order2.setBorderPainted(false);
+        order2.setHideActionText(true);
+        order2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        order2.setPreferredSize(new java.awt.Dimension(20, 10));
+        order2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reviewbtnActionPerformed(evt);
+                order2ActionPerformed(evt);
             }
         });
 
-        menubtn.setBackground(new java.awt.Color(255, 204, 102));
-        menubtn.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
-        menubtn.setForeground(new java.awt.Color(255, 255, 255));
-        menubtn.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menu", "New Product" }));
-        menubtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(255, 204, 102), new java.awt.Color(255, 204, 102), new java.awt.Color(255, 204, 102), new java.awt.Color(255, 204, 102)));
-        menubtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jComboBox2.setBackground(new java.awt.Color(255, 204, 102));
+        jComboBox2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New Product", "Menu" }));
+        jComboBox2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(255, 204, 102), new java.awt.Color(255, 204, 102), new java.awt.Color(255, 204, 102), new java.awt.Color(255, 204, 102)));
+        jComboBox2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
 
         jComboBox3.setBackground(new java.awt.Color(255, 204, 102));
         jComboBox3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
@@ -130,17 +152,17 @@ public class mainpage extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
-                .addComponent(thehungryhub, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(menubtn, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(revenuebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
-                .addComponent(reviewbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addComponent(thehungryhub, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(order1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(order2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(usericon, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -149,43 +171,25 @@ public class mainpage extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(19, 19, 19)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(usericon)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(thehungryhub)
-                        .addComponent(revenuebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(reviewbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(menubtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(usericon))
+                        .addComponent(order1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(order2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        menuList.setModel(model
-        );
-        jScrollPane1.setViewportView(menuList);
-
-        jLabel1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 24)); // NOI18N
-        jLabel1.setText("Menu list");
-
-        updatebtn.setBackground(new java.awt.Color(255, 255, 204));
-        updatebtn.setFont(new java.awt.Font("Perpetua", 0, 24)); // NOI18N
-        updatebtn.setText("Update");
-        updatebtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        deletebtn.setBackground(new java.awt.Color(255, 255, 204));
-        deletebtn.setFont(new java.awt.Font("Perpetua", 0, 24)); // NOI18N
-        deletebtn.setText("Delete");
-        deletebtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(180, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -194,12 +198,13 @@ public class mainpage extends javax.swing.JFrame {
                         .addComponent(deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(168, 168, 168))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(49, 49, 49)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -207,7 +212,7 @@ public class mainpage extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(updatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -232,13 +237,17 @@ public class mainpage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usericonActionPerformed
 
-    private void revenuebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_revenuebtnActionPerformed
+    private void order1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_order1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_revenuebtnActionPerformed
+    }//GEN-LAST:event_order1ActionPerformed
 
-    private void reviewbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reviewbtnActionPerformed
+    private void order2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_order2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_reviewbtnActionPerformed
+    }//GEN-LAST:event_order2ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,6 +286,7 @@ public class mainpage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton deletebtn;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
@@ -284,9 +294,8 @@ public class mainpage extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton login;
     private javax.swing.JTable menuList;
-    private javax.swing.JComboBox<String> menubtn;
-    private javax.swing.JButton revenuebtn;
-    private javax.swing.JButton reviewbtn;
+    private javax.swing.JButton order1;
+    private javax.swing.JButton order2;
     private javax.swing.JLabel thehungryhub;
     private javax.swing.JButton updatebtn;
     private javax.swing.JButton usericon;
