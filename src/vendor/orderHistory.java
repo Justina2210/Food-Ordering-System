@@ -4,17 +4,21 @@
  */
 package vendor;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author ngjus
  */
 public class orderHistory extends javax.swing.JFrame {
-
+    private DefaultTableModel model = new DefaultTableModel();
+    private String[] columnName = {"Order ID","Customer Name","Food","Quantity","Total Price","Remark","Status"};
     /**
      * Creates new form orderHistory
      */
     public orderHistory() {
         initComponents();
+        model.setColumnIdentifiers(columnName);
     }
 
     /**
